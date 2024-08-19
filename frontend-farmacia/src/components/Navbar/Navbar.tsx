@@ -50,10 +50,10 @@ function Navbar() {
           <li className="lit">
             <Link to="/sobre">Sobre nós</Link>
           </li>
-          <li className="nav">
+          <li className="lit">
             <Link to="/categorias">Categorias</Link>
           </li>
-          <li className="nav">
+          <li className="lit">
             <Link to="/cadastroCategoria">Cadastrar categoria</Link>
           </li>
         </div>
