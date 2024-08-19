@@ -16,6 +16,12 @@ function Navbar() {
           <li className="nav">
             <Link to="/sobre">Sobre nós</Link>
           </li>
+          <li className="nav">
+            <Link to="/categorias">Categorias</Link>
+          </li>
+          <li className="nav">
+            <Link to="/cadastroCategoria">Cadastrar categoria</Link>
+          </li>
         </ul>
         <div className="relative hidden md:flex items-center justify-center gap-3">
           <i
@@ -43,6 +49,12 @@ function Navbar() {
           </li>
           <li className="lit">
             <Link to="/sobre">Sobre nós</Link>
+          </li>
+          <li className="nav">
+            <Link to="/categorias">Categorias</Link>
+          </li>
+          <li className="nav">
+            <Link to="/cadastroCategoria">Cadastrar categoria</Link>
           </li>
         </div>
       </nav>

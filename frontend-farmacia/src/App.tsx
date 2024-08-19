@@ -1,19 +1,33 @@
-import React from "react";
-import "./App.css";
-import Home from "./pages/home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import NavBar from "./components/Navbar/Navbar";
+import Home from "./pages/home/Home";
+import ListaCategorias from "./components/Categorias/listaCategorias/listaCategorias";
+import FormularioCategorias from "./components/Categorias/formularioCategoria/formularioCategoria";
+import DeletarCategoria from "./components/Categorias/deletarCategoria/deletarCategoria";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <div className="min-h-[80vh]">
+        <NavBar />
+        <div className="min-h-[70vh]">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="" element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/categorias" element={<ListaCategorias />} />
+            <Route
+              path="/cadastroCategoria"
+              element={<FormularioCategorias />}
+            />
+            <Route
+              path="/editarCategoria/:id"
+              element={<FormularioCategorias />}
+            />
+            <Route
+              path="/deletarCategoria/:id"
+              element={<DeletarCategoria />}
+            />
           </Routes>
         </div>
         <Footer />
