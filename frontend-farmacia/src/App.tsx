@@ -1,12 +1,23 @@
 import React from "react";
 import "./App.css";
+import Home from "./pages/home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-red-500 underline text-center">
-        Hello world!
-      </h1>
+      <BrowserRouter>
+        <Navbar />
+        <div className="min-h-[80vh]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
